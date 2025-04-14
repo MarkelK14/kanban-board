@@ -11,6 +11,13 @@
     gap: 12px;
 }
 
+@media (max-width: 768px){
+    #todo-form{
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
 .form-input{
     display: flex;
     flex-direction: column;
@@ -34,7 +41,7 @@
 
     font-size: 14px;
     outline: none;
-    }
+}
 
 #add-todo {
     padding: 12px 32px;
@@ -60,6 +67,12 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
     transform: scale(1.05);
 }
+
+@media (max-width: 768px){
+    #add-todo{
+        align-self: self-start;
+    }
+}
   
 /* ---- BOARD ---- */
 .lanes {
@@ -72,6 +85,13 @@
 
     overflow: scroll;
     height: 100%;
+}
+
+@media (max-width: 768px){
+    .lanes{
+        flex-direction: column;
+        gap: 24px;
+    }
 }
 
 .heading {
