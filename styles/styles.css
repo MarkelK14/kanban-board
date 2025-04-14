@@ -67,12 +67,6 @@
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
     transform: scale(1.05);
 }
-
-@media (max-width: 768px){
-    #add-todo{
-        align-self: self-start;
-    }
-}
  
 #reset-tasks{
     padding: 12px 32px;
@@ -97,6 +91,15 @@
     background: #cf1515;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.35);
     transform: scale(1.05);
+}
+
+@media (max-width: 768px){
+    #add-todo{
+        align-self: self-start;
+    }
+    #reset-tasks{
+        align-self: self-start;
+    }
 }
 
 /* ---- BOARD ---- */
