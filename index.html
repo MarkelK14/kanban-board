@@ -14,8 +14,15 @@
 <body>
     <div class="board">
         <form id="todo-form">
-            <input type="text" name="todo-input" id="todo-input" placeholder="New TODO...">
-            <button type="submit" id="add-todo">Add +</button>
+            <div class="form-input">
+                <label class="form-input__label" for="todo-input__title">Title</label>
+                <input type="text" name="todo-input__title" id="todo-input__title" placeholder="Title...">
+            </div>
+            <div class="form-input">
+                <label class="form-input__label" for="todo-input__description">Description</label>
+                <input type="text" name="todo-input__description" id="todo-input__description" placeholder="Description...">
+            </div>
+            <button type="submit" id="add-todo">Add task</button>
         </form>
 
         <div class="lanes">

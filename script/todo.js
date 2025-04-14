@@ -1,27 +1,36 @@
 const form = document.getElementById("todo-form");
-const input = document.getElementById("todo-input");
+const titleInput = document.getElementById("todo-input__title");
+const descriptionInput = document.getElementById("todo-input__description");
 const todoLane = document.getElementById("todo-lane");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const value = input.value;
+    e.preventDefault();
+    const title = titleInput.value;
+    const description = descriptionInput.value;
 
-  if (!value) return;
+    if (!title || !description) return;
 
-  const newTask = document.createElement("p");
-  newTask.classList.add("task");
-  newTask.setAttribute("draggable", "true");
-  newTask.innerText = value;
+    const newTask = document.createElement("div");
+    newTask.classList.add("task");
+    newTask.setAttribute("draggable", "true");
 
-  newTask.addEventListener("dragstart", () => {
+    const taskTitle = document.createElement("h3");
+    taskTitle.innerText = title;
+    const taskDescription = document.createElement("p");
+    taskDescription.innerText = description;
+    newTask.appendChild(taskTitle);
+    newTask.appendChild(taskDescription);
+
+    newTask.addEventListener("dragstart", () => {
     newTask.classList.add("is-dragging");
-  });
+    });
 
-  newTask.addEventListener("dragend", () => {
+    newTask.addEventListener("dragend", () => {
     newTask.classList.remove("is-dragging");
-  });
+    });
 
-  todoLane.appendChild(newTask);
+    todoLane.appendChild(newTask);
 
-  input.value = "";
+    titleInput.value = "";
+    descriptionInput.value = "";
 });
