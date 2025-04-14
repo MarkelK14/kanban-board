@@ -12,6 +12,34 @@
     <script src="script/todo.js" defer></script>
 </head>
 <body>
-    <h1>hello world</h1>
+    <div class="board">
+        <form id="todo-form">
+            <input type="text" name="todo-input" id="todo-input" placeholder="New TODO...">
+            <button type="submit" id="add-todo">Add +</button>
+        </form>
+
+        <div class="lanes">
+            <div class="swim-lanes" id="todo-lane">
+                <h3 class="heading">TODO</h3>
+                <p class="task" draggable="true">Task #1</p>
+                <p class="task" draggable="true">Task #2</p>
+                <p class="task" draggable="true">Task #3</p>
+            </div>
+            
+            <div class="swim-lanes" id="doing-lane">
+                <h3 class="heading">DOING</h3>
+                <p class="task" draggable="true">Task #4</p>
+                <p class="task" draggable="true">Task #5</p>
+                <p class="task" draggable="true">Task #6</p>
+            </div>
+            
+            <div class="swim-lanes" id="done-lane">
+                <h3 class="heading">DONE</h3>
+                <p class="task" draggable="true">Task #7</p>
+                <p class="task" draggable="true">Task #8</p>
+                <p class="task" draggable="true">Task #9</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
