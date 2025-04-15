@@ -1,7 +1,6 @@
 const resetButton = document.getElementById("reset-tasks");
 
 resetButton.addEventListener("click", () => {
-    alert("Resetting tasks...");
     if (confirm("Are you sure you want to reset the tasks? This will remove all tasks from the board.")) {
         const tasks = document.querySelectorAll(".task");
         tasks.forEach((task) => {
